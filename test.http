@@ -1,0 +1,46 @@
+# GET root URL
+GET http://127.0.0.1:8000/
+Accept: text/plain
+
+
+
+###
+
+# GET all users
+GET http://127.0.0.1:8000/students
+Accept: application/json
+
+###
+
+# GET a specific user by ID
+GET http://127.0.0.1:8000/students/1
+Accept: application/json
+
+###
+
+# POST create a new user
+POST http://127.0.0.1:8000/students
+Content-Type: application/json
+
+{
+  "name": "Charlie",
+    "grade": "A",
+    "email": "charlie@email.com"
+}
+
+###
+
+# PUT update a user by ID
+PUT http://127.0.0.1:8000/students/1
+Content-Type: application/json
+
+{
+  "name": "Alice Updated",
+  "grade": "A Updated",
+  "email": "Alice@updated.com"
+}
+
+
+
+# DELETE a user by ID
+DELETE http://127.0.0.1:8000//students/1
